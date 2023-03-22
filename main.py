@@ -2,8 +2,9 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
+import os
 
-chrome_driver_path = "/Users/hadikassamali/Development/chromedriver"
+chrome_driver_path = os.environ.get("chrome_driver_path")
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
